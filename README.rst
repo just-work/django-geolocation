@@ -11,7 +11,7 @@ Quick start
 -----------
 
 1.  Install package with tag version.
-    pip install https://github.com/just-work/django-geolocation/archive/1.0.zip
+    pip install https://github.com/just-work/django-geolocation/archive/1.1.zip
 
 2. Add to INSTALLED_APPS
     'geolocation'
