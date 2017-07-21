@@ -10,20 +10,13 @@ Detailed documentation is in the "docs" directory.
 Quick start
 -----------
 
-1. Add "polls" to your INSTALLED_APPS setting like this::
+1.  Install package with tag version.
+    pip install https://github.com/just-work/django-geolocation/archive/1.0.zip
 
-      INSTALLED_APPS = (
-          ...
-          'polls',
-      )
+2. Add to INSTALLED_APPS
+    'geolocation'
 
-2. Include the polls URLconf in your project urls.py like this::
+3. Create you template if need extend it from 'geolocation/tags/base_location.html'
+    'templates/geolocation/tags/location.html'
 
-      url(r'^polls/', include('polls.urls')),
-
-3. Run `python manage.py syncdb` to create the polls models.
-
-4. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create a poll (you'll need the Admin app enabled).
-
-5. Visit http://127.0.0.1:8000/polls/ to participate in the poll.
+4. Put templatetags named "get_location" to your template with loading location_tags
