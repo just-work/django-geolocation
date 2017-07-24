@@ -22,10 +22,12 @@
 
     function showLinks(approved) {
         if (approved) {
+            $('#location__change_link').removeClass('hidden');
             $('#location__yes_link').addClass('hidden');
             $('#location__no_link').addClass('hidden');
         } else {
             $('#location__yes_link').removeClass('hidden');
+            $('#location__change_link').addClass('hidden');
             $('#location__no_link').removeClass('hidden');
         }
     }
@@ -92,7 +94,7 @@
         }
     });
 
-    $('.close-location-popup').on('click', function(){
+    $('.close-location-popup').on('click', function(e){
         $.fancybox.close();
     });
 
