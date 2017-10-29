@@ -16,7 +16,8 @@
 
     function setLocCookie(a) {
         var now = new Date();
-        now.setTime(now.getTime() + 1 * 3600 * 1000);
+        // cookie will expire after 24 hours
+        now.setTime(now.getTime() + 24 * 3600 * 1000);
         Cookies.set('location', a, { expires: now });
     }
 
