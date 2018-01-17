@@ -68,9 +68,13 @@
         });
     }
 
-    var a = Cookies.get('location')
+    var a = Cookies.get('location');
     if (typeof a == 'undefined') {
-        ymaps.ready(init);
+        if (ymaps) {
+            ymaps.ready(init);
+        } else {
+            setUndefinedLoc();
+        }
     } else {
         var spl = a.split(" ");
         setLoc(spl[0]);
